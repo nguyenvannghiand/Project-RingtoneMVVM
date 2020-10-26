@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.main.MainActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="dev.jai.billgenerator.ui.activity.main.MainViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/clRootView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_layout_top"
+                    android:layout_marginTop="@dimen/common_5_dp"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/icon_transition_name"
+                            android:layout_width="@dimen/size_icon_menu_home"
+                            android:layout_height="@dimen/size_icon_menu_home"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/common_10_dp"
+                            android:importantForAccessibility="no"
+                            android:padding="@dimen/common_5_dp"
+                            android:src="@drawable/icon_menu"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/icon_menu_home"
+                            android:layout_width="@dimen/size_icon_menu_home"
+                            android:layout_height="@dimen/size_icon_menu_home"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/common_10_dp"
+                            android:importantForAccessibility="no"
+                            android:padding="@dimen/common_5_dp"
+                            android:src="@drawable/icon_menu" />
+
+                        <dev.jai.billgenerator.commom.view.MyTextViewBold
+                            style="@style/style_text_title_top"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@id/icon_search_toolbar"
+                            android:layout_toEndOf="@id/icon_menu_home"
+                            android:gravity="start|center"
+                            android:paddingStart="@dimen/common_10_dp"
+                            android:paddingEnd="0dp"
+                            android:text="@string/app_name" />
+
+                        <ImageView
+                            android:id="@+id/icon_search_toolbar"
+                            android:layout_width="@dimen/size_icon_menu_home"
+                            android:layout_height="@dimen/size_icon_menu_home"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_list"
+                            android:background="@drawable/bg_icon_search_toolbar"
+                            android:importantForAccessibility="no"
+                            android:padding="@dimen/common_5_dp"
+                            android:src="@drawable/icon_search" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.drawerlayout.widget.DrawerLayout
+                android:id="@+id/drawerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <fragment
+                    android:id="@+id/my_nav_host_fragment"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:defaultNavHost="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:navGraph="@navigation/navigation" />
+
+                <com.google.android.material.navigation.NavigationView
+                    android:id="@+id/navigationView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@color/white">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/nav_header_main" />
+
+                            <include layout="@layout/layout_item_menu" />
+
+                            <dev.jai.billgenerator.commom.view.MyTextViewBold
+                                android:id="@+id/title_more_app"
+                                style="@style/style_title_menu_navigation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/more_apps"
+                                android:visibility="gone" />
+
+                            <dev.jai.billgenerator.commom.view.NonScrollListView
+                                android:id="@+id/gv_more_app"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="@null"
+                                android:dividerHeight="0dp"
+                                android:gravity="center" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/common_20_dp"
+                                android:orientation="vertical">
+
+                                <dev.jai.billgenerator.commom.view.MyTextViewBold
+                                    android:id="@+id/title_contact_email"
+                                    style="@style/style_title_menu_navigation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_10_dp"
+                                    android:text="@string/contact_us" />
+
+                                <dev.jai.billgenerator.commom.view.MyTextView
+                                    android:id="@+id/contact_email"
+                                    style="@style/style_title_menu_navigation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="@dimen/common_10_dp"
+                                    android:paddingEnd="@dimen/common_5_dp"
+                                    android:text="@string/contact_email" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </com.google.android.material.navigation.NavigationView>
+
+            </androidx.drawerlayout.widget.DrawerLayout>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

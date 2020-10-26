@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/bg_nav_header_menu"
+    android:gravity="start|center"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/common_15_dp"
+    android:paddingEnd="@dimen/common_15_dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:layout_width="@dimen/nav_header_avatar"
+        android:layout_height="@dimen/nav_header_avatar"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/img_logo" />
+
+    <dev.jai.billgenerator.commom.view.MyTextViewBold
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_5_dp"
+        android:gravity="start|center"
+        android:text="@string/msg_make_with_love"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+</LinearLayout>

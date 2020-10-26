@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common_10_dp"
+    android:layout_marginBottom="@dimen/common_10_dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_menu_download"
+        style="@style/style_layout_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon_menu"
+            android:layout_height="@dimen/size_icon_menu"
+            android:importantForAccessibility="no"
+            android:src="@drawable/menu_download" />
+
+        <dev.jai.billgenerator.commom.view.MyTextView
+            style="@style/style_text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_download" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_menu_favorite"
+        style="@style/style_layout_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon_menu"
+            android:layout_height="@dimen/size_icon_menu"
+            android:importantForAccessibility="no"
+            android:src="@drawable/menu_favorite" />
+
+        <dev.jai.billgenerator.commom.view.MyTextView
+            style="@style/style_text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_favorite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_menu_request"
+        style="@style/style_layout_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon_menu"
+            android:layout_height="@dimen/size_icon_menu"
+            android:importantForAccessibility="no"
+            android:src="@drawable/menu_request" />
+
+        <dev.jai.billgenerator.commom.view.MyTextView
+            style="@style/style_text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/re_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_menu_set"
+        style="@style/style_layout_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon_menu"
+            android:layout_height="@dimen/size_icon_menu"
+            android:importantForAccessibility="no"
+            android:src="@drawable/menu_set" />
+
+        <dev.jai.billgenerator.commom.view.MyTextView
+            style="@style/style_text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_set" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_menu_setting"
+        style="@style/style_layout_menu_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <dev.jai.billgenerator.commom.view.MyTextView
+            android:id="@+id/layout_menu_reset"
+            style="@style/style_text_menu_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_ringtone_menu" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/size_icon_menu"
+            android:layout_marginTop="@dimen/common_5_dp"
+            android:layout_marginBottom="@dimen/common_5_dp"
+            android:background="@drawable/bg_view_divider_menu" />
+
+        <RelativeLayout
+            android:id="@+id/menu_show_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <dev.jai.billgenerator.commom.view.MyTextView
+                style="@style/style_text_menu_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/switch_show_notification"
+                android:text="@string/show_notification" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_show_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:gravity="center"
+                android:text=""
+                android:thumb="@drawable/switch_thumb_custom"
+                app:track="@drawable/switch_track_custom" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_menu_policy"
+        style="@style/style_layout_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon_menu"
+            android:layout_height="@dimen/size_icon_menu"
+            android:importantForAccessibility="no"
+            android:src="@drawable/menu_policy" />
+
+        <dev.jai.billgenerator.commom.view.MyTextView
+            style="@style/style_text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_policy" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_menu_share"
+        style="@style/style_layout_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/size_icon_menu"
+            android:layout_height="@dimen/size_icon_menu"
+            android:importantForAccessibility="no"
+            android:src="@drawable/menu_share" />
+
+        <dev.jai.billgenerator.commom.view.MyTextView
+            style="@style/style_text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_app" />
+    </LinearLayout>
+</LinearLayout>

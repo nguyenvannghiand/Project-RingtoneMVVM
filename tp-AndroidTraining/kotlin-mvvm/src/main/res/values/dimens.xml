@@ -1,0 +1,46 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_default_start_end">16dp</dimen>
+    <dimen name="padding_default">16dp</dimen>
+    <dimen name="margin_default_start_end_half">8dp</dimen>
+    <dimen name="elevation_default">8dp</dimen>
+    <dimen name="card_radius_default">8dp</dimen>
+
+    <!-- default -->
+    <dimen name="height_layout_top">48dp</dimen>
+
+
+    <!--Common textSize sp-->
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_menu">13sp</dimen>
+
+
+    <!--NavigationView-->
+    <dimen name="size_icon_menu">35dp</dimen>
+    <dimen name="size_icon_menu_home">35dp</dimen>
+    <dimen name="margin_list">@dimen/common_15_dp</dimen>
+
+    <!--Navigation header-->
+    <dimen name="nav_header_height">200dp</dimen>
+    <dimen name="nav_header_avatar">80dp</dimen>
+
+
+    <dimen name="common_2_dp">2dp</dimen>
+    <dimen name="common_4_dp">4dp</dimen>
+    <dimen name="common_8_dp">8dp</dimen>
+    <dimen name="common_5_dp">5dp</dimen>
+    <dimen name="common_10_dp">10dp</dimen>
+    <dimen name="common_12_dp">12dp</dimen>
+    <dimen name="common_15_dp">15dp</dimen>
+    <dimen name="common_16_dp">16dp</dimen>
+    <dimen name="common_20_dp">20dp</dimen>
+    <dimen name="common_24_dp">24dp</dimen>
+    <dimen name="common_40_dp">40dp</dimen>
+    <dimen name="common_44_dp">44dp</dimen>
+    <dimen name="common_48_dp">48dp</dimen>
+    <dimen name="common_54_dp">54dp</dimen>
+    <dimen name="common_60_dp">60dp</dimen>
+
+
+</resources>

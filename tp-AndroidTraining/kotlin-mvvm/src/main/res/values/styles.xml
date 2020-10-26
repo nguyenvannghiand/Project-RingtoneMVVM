@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    //
+    <style name="style_text_title_top">
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/color_text_title_top</item>
+    </style>
+
+    <style name="style_layout_item_menu">
+        <item name="android:paddingStart">@dimen/common_10_dp</item>
+        <item name="android:paddingEnd">@dimen/common_10_dp</item>
+        <item name="android:paddingTop">@dimen/common_5_dp</item>
+        <item name="android:paddingBottom">@dimen/common_5_dp</item>
+    </style>
+
+    <style name="style_layout_menu_setting" parent="style_layout_item_menu">
+        <item name="android:background">#e8e8e8</item>
+    </style>
+
+    <style name="style_text_menu">
+        <item name="android:textSize">@dimen/text_size_menu</item>
+        <item name="android:textColor">@color/color_text_menu</item>
+        <item name="android:layout_marginStart">@dimen/common_10_dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="style_text_menu_set" parent="style_text_menu">
+        <item name="android:paddingStart">@dimen/size_icon_menu</item>
+        <item name="android:paddingTop">@dimen/common_5_dp</item>
+        <item name="android:paddingBottom">@dimen/common_5_dp</item>
+    </style>
+
+    <style name="style_title_menu_navigation">
+        <item name="android:layout_marginStart">@dimen/common_10_dp</item>
+        <item name="android:textSize">@dimen/text_size_menu</item>
+        <item name="android:textColor">@color/color_text_menu</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+</resources>
